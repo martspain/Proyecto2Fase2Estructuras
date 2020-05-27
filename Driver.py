@@ -3,16 +3,12 @@
 #     Hansel López    Carné:
 #     Martín España   Carné: 19258
 #Referencias bibliograficas: https://github.com/elena/py2neo-quickstart#step-1-connect-to-graph-using-py2neo
+#https://www.youtube.com/watch?time_continue=229&v=3JMhX1sT98U&feature=emb_title
 
 # Base de datos
 from py2neo import*
 graph = Graph("bolt://localhost:7687", auth=("neo4j","1234"))
-#instanciar NodeMatcher
-n_matcher = NodeMatcher(graph)
-#n_matcher.match()
-#instanciar RelactionshipMatcher
-r_matcher = RelationshipMatcher(graph)
-#r_matcher.match()
+
 
 
 
@@ -78,7 +74,7 @@ def registro():
     graph.create(Relationship(user, "OBTUVO_PUNTAJE", puntaje))
 # Se muestra el banner y el titulo del app
 print("*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*")
-print("				            _____ \n					  ,888888b. \n					.d888888888b \n				_..-'.`*'_,8888888888b \n				  ,'..-..`\"ad888888888b. \n					 ``-. `*Y888888b. \n						 \\   `Y888888b. \n						 :     Y8888888b. \n						 :      Y88888888b. \n						 |    _,8ad88888888. \n						 : .d88888888888888b. \n						 \\d888888888888888888 \n						 8888;'''`88888888888 \n						 888'     Y8888888888 \n 						 `Y8      :8888888888 \n						  |`      '8888888888 \n						  |        8888888888 \n 						  |        8888888888 \n						  |        8888888888 \n						  |       ,888888888P \n						  :       ;888888888' \n						   \\      d88888888' \n						  _.>,    888888P' \n						<,--''`.._>8888( \n						 `>__...--' `''` SSt \n")
+print("                         _____ \n                      ,888888b. \n                  .d888888888b \n             _..-'.`*'_,8888888888b \n                 ,'..-..`\"ad888888888b. \n                     ``-. `*Y888888b. \n                         \\   `Y888888b. \n                      :     Y8888888b. \n                         :      Y88888888b. \n                       |    _,8ad88888888. \n                      : .d88888888888888b. \n                         \\d888888888888888888 \n                        8888;'''`88888888888 \n                         888'     Y8888888888 \n                         `Y8      :8888888888 \n                          |`      '8888888888 \n                          |        8888888888 \n                          |        8888888888 \n                          |        8888888888 \n                          |       ,888888888P \n                          :       ;888888888' \n                           \\      d88888888' \n                          _.>,    888888P' \n                       <,--''`.._>8888( \n                      `>__...--' `''` SSt \n")
 print("*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*Bienvenido a Meetguin*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*")
 
 
@@ -112,7 +108,7 @@ while menuIsActive:
     print("\n \n(o_(o_(o_(o_ \n//\\//\\//\\//\\ \nU_/U_/U_/U_/_ \n")
     print(" __  __ \n|  \\/  | \n| \\  / | ___ _ __  _   _ \n| |\\/| |/ _ \\ '_ \\| | | | \n| |  | |  __/ | | | |_| | \n|_|  |_|\\___|_| |_|\\__,_|")
     print("\n(o_(o_(o_(o_ \n//\\//\\//\\//\\ \nU_/U_/U_/U_/_ \n")
-    
+     
     eleccion = input("1. Buscar nuevo MeetMate. \n2. Ver mis MeetMates \n3. Acerca de... \n4. Salir \n")
     
     if eleccion == "1":
@@ -131,6 +127,9 @@ while menuIsActive:
         print("\n(o_(o_(o_(o_ \n//\\//\\//\\//\\ \nU_/U_/U_/U_/_ \n")
         
     elif eleccion == "4":
+        #graph.delete(registro(user))
+        #graph.delete(registro(puntaje))
+
         menuIsActive = False
     else:
         print("\nPorfavor, ingrese una opcion válida... \n")
