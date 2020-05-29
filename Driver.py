@@ -1,9 +1,13 @@
+# Proyecto 2: Meetguin 
 # Autores:
 #     Sofía Rueda     Carné: 19099
-#     Hansel López    Carné:
+#     Hansel López    Carné: 19026
 #     Martín España   Carné: 19258
 #Referencias bibliograficas: https://github.com/elena/py2neo-quickstart#step-1-connect-to-graph-using-py2neo
 #https://www.youtube.com/watch?time_continue=229&v=3JMhX1sT98U&feature=emb_title
+
+# Importando modulo Perfiles.py
+import Perfiles as profiles
 
 # Base de datos
 from py2neo import*
@@ -11,7 +15,8 @@ graph = Graph("bolt://localhost:7687", auth=("neo4j","1234"))
 
 graph.delete_all()
 
-
+# Se insertan usuarios preguardados desde archivo: txt
+profiles.readTXT()
 
 
 # Bandera del menu principal
