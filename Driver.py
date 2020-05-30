@@ -18,7 +18,6 @@ graph.delete_all()
 # Se insertan usuarios preguardados desde archivo: txt
 profiles.readTXT()
 
-
 # Bandera del menu principal
 loginIsActive = True
 menuIsActive = True
@@ -79,6 +78,10 @@ def registro():
     #user1 = graph.nodes.match(name=nombre).first()
     #puntaje = graph.match(nodes=[user1], r_type="OBTUVO_PUNTAJE")
     graph.create(Relationship(user, "OBTUVO_PUNTAJE", puntaje))
+    
+    profiles.relateIntervals(porcentaje, puntaje)
+    
+    
 # Se muestra el banner y el titulo del app
 print("*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*")
 print("                         _____ \n                      ,888888b. \n                  .d888888888b \n             _..-'.`*'_,8888888888b \n                 ,'..-..`\"ad888888888b. \n                     ``-. `*Y888888b. \n                         \\   `Y888888b. \n                      :     Y8888888b. \n                         :      Y88888888b. \n                       |    _,8ad88888888. \n                      : .d88888888888888b. \n                         \\d888888888888888888 \n                        8888;'''`88888888888 \n                         888'     Y8888888888 \n                         `Y8      :8888888888 \n                          |`      '8888888888 \n                          |        8888888888 \n                          |        8888888888 \n                          |        8888888888 \n                          |       ,888888888P \n                          :       ;888888888' \n                           \\      d88888888' \n                          _.>,    888888P' \n                       <,--''`.._>8888( \n                      `>__...--' `''` SSt \n")

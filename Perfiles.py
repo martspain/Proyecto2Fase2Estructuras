@@ -114,7 +114,40 @@ def calcularPorcentajeRandom():
     porcentaje = (suma*100)/50
     return porcentaje
 
-
+def relateIntervals(number, nodeOne):
+    matcher = NodeMatcher(graph)
+    InterOne = matcher.match("IntervaloUno").first()
+    InterTwo = matcher.match("IntervaloDos").first()
+    InterThree = matcher.match("IntervaloTres").first()
+    InterFour = matcher.match("IntervaloCuatro").first()
+    InterFive = matcher.match("IntervaloCinco").first()
+    InterSix = matcher.match("IntervaloSeis").first()
+    InterSeven = matcher.match("IntervaloSiete").first()
+    InterEight = matcher.match("IntervaloOcho").first()
+    InterNine = matcher.match("IntervaloNueve").first()
+    InterTen = matcher.match("IntervaloDiez").first()
+    
+    #Haciendo la relacion con el intervalo de puntaje correspondiente
+    if number > 0 and number <= 10:
+        graph.create(Relationship(nodeOne, "ESTA_EN", InterOne))
+    elif number > 10 and number <= 20:
+        graph.create(Relationship(nodeOne, "ESTA_EN", InterTwo))
+    elif number > 20 and number <= 30:
+        graph.create(Relationship(nodeOne, "ESTA_EN", InterThree))
+    elif number > 30 and number <= 40:
+        graph.create(Relationship(nodeOne, "ESTA_EN", InterFour))
+    elif number > 40 and number <= 50:
+        graph.create(Relationship(nodeOne, "ESTA_EN", InterFive))
+    elif number > 50 and number <= 60:
+        graph.create(Relationship(nodeOne, "ESTA_EN", InterSix))
+    elif number > 60 and number <= 70:
+        graph.create(Relationship(nodeOne, "ESTA_EN", InterSeven))
+    elif number > 70 and number <= 80:
+        graph.create(Relationship(nodeOne, "ESTA_EN", InterEight))
+    elif number > 80 and number <= 90:
+        graph.create(Relationship(nodeOne, "ESTA_EN", InterNine))
+    elif number > 90 and number <= 100:
+        graph.create(Relationship(nodeOne, "ESTA_EN", InterTen))
 
 
 
