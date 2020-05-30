@@ -85,26 +85,13 @@ print("                         _____ \n                      ,888888b. \n      
 print("*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*Bienvenido a Meetguin*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*")
 
 
-# Se pregunta al usuario si ya ha iniciado sesión.
-# En caso contrario se le incita a crear una cuenta.
-#        |
-#        V
-# Ciclo del login
+#Ciclo del registro del usuario
 while loginIsActive:
-    opcion = input("\nBienvenido. ¿Ya tienes cuenta? \n1. Sí, deseo iniciar sesión. \n2. No, me gustaría crear una cuenta. \n3. Salir. \n")
+    opcion = input("\nBienvenido. ¿Deseas buscar un MeetMate? \n1. Sí, deseo registrarme. \n2. No, me gustaría salir. \n")
     if opcion == "1":
-        #------------------------------------------------------------------
-        # Aqui se verifica si ya tiene cuenta revisando en la base de datos
-        #------------------------------------------------------------------
+        registro()
         loginIsActive = False
     elif opcion == "2":
-        registro()
-        
-        #--------------------------------------------------------
-        # Aqui se añaden los datos del usuario a la base de datos
-        #--------------------------------------------------------
-        loginIsActive = False
-    elif opcion == "3":
         loginIsActive = False
         menuIsActive = False
     else:
