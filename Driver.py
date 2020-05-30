@@ -130,7 +130,16 @@ while menuIsActive:
         print("")
     elif eleccion == "3":
         print("\n \n(o_(o_(o_(o_ \n//\\//\\//\\//\\ \nU_/U_/U_/U_/_ \n")
-        print("MeetGuin es una aplicación destinada a la interacción entre personas. Si tienes ")
+        print("MeetGuin es una aplicación destinada a la interacción entre personas. Si tienes ganas de conocer a tu pareja ideal, MeetGuin es lo que estas buscando.")
+        print("Los pingüinos emperador, cuando se enamoran y encuentran a su pareja perfecta, se unen para toda la vida; siendo una de las especies más fieles.")
+        print("Sabiendo esto, ¿te gustaría encontrar a tu pareja pinüina? ¡No te preocupes! MeetGuin hara la matemática necesaria para ayudarte a encontrarla.")
+        print("Con nuestro complejo \"Algoritmo del Amor\" descartaremos algunas opciones para dejarte nada más con las posibilidades con mayor compatibilidad.")
+        print("Luego, quedará a tu criterio quién deseas que sea tu MeetMate.")
+        print("\nRecuerda que estas hablando con personas, no con pingüinos. Así que evita conversaciones incómodas. En lugar de ello, aprovecha a conocer a tu pareja.")
+        print("Cuando ambos estén listos, pueden ponerse de acuerdo para conocerse en persona, recordando siempre que MeetGuin no se responsabiliza por nada que pase ")
+        print("fuera de la aplicación, así que se cauteloso(a). No toleramos conversaciones ni fotografías tóxicas, pornográficas o éticamente inapropiadas. Así que ")
+        print("cuida lo que publicas. Aparte de eso, disfruta de la aplicación, y te deseamos suerte en la búsqueda de tu pingüino(a). Atentamente, ")
+        print("El equipo de MeetGuin.")
         print("\n(o_(o_(o_(o_ \n//\\//\\//\\//\\ \nU_/U_/U_/U_/_ \n")
         
     elif eleccion == "4":
