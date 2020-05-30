@@ -12,3 +12,4 @@ Manual de usuario
 
 5. Disfrutar el programa.
 
+Si se desea, se puede observar nuestro video-tutorial del manual de usuario: https://youtu.be/uK_5WyrXTEw
