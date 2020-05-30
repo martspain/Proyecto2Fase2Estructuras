@@ -37,12 +37,23 @@ def readTXT():
 def calcularPorcentajeRandom():
     import random
     cantidad=10
+    rango=0
+    rango = random.randint(1,3) 
     n=0
     numeros = []
     while n < cantidad:
-        numero = random.randint(1,5)
-        numeros.append(numero)
-        n = n + 1
+        if rango == 1:
+            numero = random.randint(1,2)
+            numeros.append(numero)
+            n = n + 1
+        elif rango == 2:
+            numero = random.randint(1,5)
+            numeros.append(numero)
+            n = n + 1
+        elif rango == 3:
+            numero = random.randint(4,5)
+            numeros.append(numero)
+            n = n + 1
     suma = numeros[0] + numeros[1] + numeros[2] + numeros[3] + numeros[4] + numeros[5] + numeros[6] + numeros[7] + numeros[8] + numeros[9]
     porcentaje = (suma*100)/50
     return porcentaje
