@@ -86,7 +86,7 @@ def registro():
     
 # Se muestra el banner y el titulo del app
 print("*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*")
-print("                         _____ \n                      ,888888b. \n                  .d888888888b \n             _..-'.`*'_,8888888888b \n                 ,'..-..`\"ad888888888b. \n                     ``-. `*Y888888b. \n                         \\   `Y888888b. \n                      :     Y8888888b. \n                         :      Y88888888b. \n                       |    _,8ad88888888. \n                      : .d88888888888888b. \n                         \\d888888888888888888 \n                        8888;'''`88888888888 \n                         888'     Y8888888888 \n                         `Y8      :8888888888 \n                          |`      '8888888888 \n                          |        8888888888 \n                          |        8888888888 \n                          |        8888888888 \n                          |       ,888888888P \n                          :       ;888888888' \n                           \\      d88888888' \n                          _.>,    888888P' \n                       <,--''`.._>8888( \n                      `>__...--' `''` SSt \n")
+print("                       _____ \n                     ,888888b. \n                   .d888888888b \n          _..-'.`*'_,8888888888b \n            ,'..-..`\"ad888888888b. \n                     ``-. `*Y888888b. \n                         \\   `Y888888b. \n                          :     Y8888888b. \n                          :      Y88888888b. \n                          |    _,8ad88888888. \n                          : .d88888888888888b. \n                          d888888888888888888 \n                         8888;'''`88888888888 \n                         888'     Y8888888888 \n                         `Y8      :8888888888 \n                          |`      '8888888888 \n                          |        8888888888 \n                          |        8888888888 \n                          |        8888888888 \n                          |       ,888888888P \n                          :       ;888888888' \n                           \\      d88888888' \n                          _.>,    888888P' \n                       <,--''`.._>8888( \n                      `>__...--' `''` SSt \n")
 print("*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*Bienvenido a Meetguin*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*")
 
 
@@ -108,7 +108,7 @@ while menuIsActive:
     print(" __  __ \n|  \\/  | \n| \\  / | ___ _ __  _   _ \n| |\\/| |/ _ \\ '_ \\| | | | \n| |  | |  __/ | | | |_| | \n|_|  |_|\\___|_| |_|\\__,_|")
     print("\n(o_(o_(o_(o_ \n//\\//\\//\\//\\ \nU_/U_/U_/U_/_ \n")
      
-    eleccion = input("1. Buscar nuevo MeetMate. \n2. Ver mis MeetMates \n3. Acerca de... \n4. Salir \n")
+    eleccion = input("1. Buscar nuevo MeetMate. \n2. Acerca de... \n3. Salir \n")
     
     if eleccion == "1":
         
@@ -121,19 +121,9 @@ while menuIsActive:
             mate = graph.evaluate("MATCH (user:Usuario)-[*1..5]-(Persona{sex:'Masculino'}) RETURN DISTINCT Persona.name LIMIT(3)")
             print("Tu mate perfecto es >> {}".format(mate))
 
+        print("                                        * \n                         *  _|_ \n                         .-' * '-. * \n                        /       * \\ \n                     *  ^^^^^|^^^^^ \n                         .~. |  .~. \n                        / ^ \\| / ^ \\ \n                       (|   |J/|   |) \n                       '\\   /`\"\\   /` \n             -- '' -'-'  ^`^    ^`^  -- '' -'-' \n")
         
-        print("")
-
-        
-        
-        
-        print("")
     elif eleccion == "2":
-        #----------------------------------------------------------------------
-        # Se carga de la base de datos la lista de matches que tenga el usuario 
-        #----------------------------------------------------------------------
-        print("")
-    elif eleccion == "3":
         print("*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*")
         print("\n \n(o_(o_(o_(o_ \n//\\//\\//\\//\\ \nU_/U_/U_/U_/_ \n")
         print("MeetGuin es una aplicación destinada a la interacción entre personas. Si tienes ganas de conocer a tu pareja ideal, MeetGuin es lo que estas buscando.")
@@ -149,7 +139,7 @@ while menuIsActive:
         print("\n(o_(o_(o_(o_ \n//\\//\\//\\//\\ \nU_/U_/U_/U_/_ \n")
         print("                                                 [Presiona (ENTER) para continuar...]")
         input()
-    elif eleccion == "4":
+    elif eleccion == "3":
         #graph.delete(registro(user))
         #graph.delete(registro(puntaje))
 
