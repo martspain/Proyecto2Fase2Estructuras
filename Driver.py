@@ -27,7 +27,9 @@ def registro():
     
     print("\n*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_* REGISTRO I *_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*\n")
     nombre = input("~ Ingrese su nombre: ")
+    nombre = nombre.capitalize()
     sexo = input("~ Ingrese su sexo (femenio/masculino): ")
+    sexo = sexo.capitalize()
     edad = input("~ Ingrese su edad: ")
         
     user = Node("Persona", name= nombre, sex= sexo, age= edad)
@@ -119,6 +121,7 @@ while menuIsActive:
         #----------------------------------------------------------------------
         print("")
     elif eleccion == "3":
+        print("*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*")
         print("\n \n(o_(o_(o_(o_ \n//\\//\\//\\//\\ \nU_/U_/U_/U_/_ \n")
         print("MeetGuin es una aplicación destinada a la interacción entre personas. Si tienes ganas de conocer a tu pareja ideal, MeetGuin es lo que estas buscando.")
         print("Los pingüinos emperador, cuando se enamoran y encuentran a su pareja perfecta, se unen para toda la vida; siendo una de las especies más fieles.")
@@ -131,7 +134,8 @@ while menuIsActive:
         print("cuida lo que publicas. Aparte de eso, disfruta de la aplicación, y te deseamos suerte en la búsqueda de tu pingüino(a). Atentamente, ")
         print("El equipo de MeetGuin.")
         print("\n(o_(o_(o_(o_ \n//\\//\\//\\//\\ \nU_/U_/U_/U_/_ \n")
-        
+        print("                                                 [Presiona (ENTER) para continuar...]")
+        input()
     elif eleccion == "4":
         #graph.delete(registro(user))
         #graph.delete(registro(puntaje))
