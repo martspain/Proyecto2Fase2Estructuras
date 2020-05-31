@@ -32,7 +32,7 @@ def registro():
     sexo = sexo.capitalize()
     edad = input("~ Ingrese su edad: ")
         
-    user = Node("Persona", name= nombre, sex= sexo, age= edad)
+    user = Node("Usuario", name= nombre, sex= sexo, age= edad)
     tx = graph.begin()
     tx.create(user)
     tx.commit()
@@ -111,9 +111,22 @@ while menuIsActive:
     eleccion = input("1. Buscar nuevo MeetMate. \n2. Ver mis MeetMates \n3. Acerca de... \n4. Salir \n")
     
     if eleccion == "1":
-        #----------------------------------------------------------------------------------------
-        # Se procede a ejecutar el algoritmo de recomendación para ver la siguiente recomendación
-        #----------------------------------------------------------------------------------------
+        
+        user = graph.evaluate("MATCH (user:Usuario) RETURN user.sex")
+        
+        if user == "masculino" or user == "Masculino":
+            mate = graph.evaluate("MATCH (user:Usuario)-[*1..5]-(Persona{sex:'Femenino'}) RETURN DISTINCT Persona.name LIMIT(3)")
+            print(mate)
+        elif user == "femenino" or user == "Femenino":
+            mate = graph.evaluate("MATCH (user:Usuario)-[*1..5]-(Persona{sex:'Masculino'}) RETURN DISTINCT Persona.name LIMIT(3)")
+            print("Tu mate perfecto es >> {}".format(mate))
+
+        
+        print("")
+
+        
+        
+        
         print("")
     elif eleccion == "2":
         #----------------------------------------------------------------------
