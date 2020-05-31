@@ -40,31 +40,26 @@ def registro():
     # Preguntas para encontrar match 
     print("\n*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_* REGISTRO II *_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*\n")
     print("\nA continuación se le presentara una serie de preguntas para determinar su nivel de compatibilidad con otros usuarios. Las preguntas se responden a partir de una escala del 1 al 5, ingrese el numero con la opción que le interese.\n")
-    
     print("1. ¿Qué tanto le importa el matrimonio?\n\n - 1. No me importa para nada \n - 2. No me importa \n - 3. Me da igual \n - 4. Me importa \n - 5. Me importa mucho")
-    num1 = int(input())
+    num1 = profiles.newInput()
     print("   \n---> ¿Qué tanto debería importarle a su pareja?\n\n - 1. No le importa para nada \n - 2. No le importa \n - 3. Le da igual \n - 4. Le importa \n - 5. Le importa mucho")
-    num2 = int(input())
-    
+    num2 = profiles.newInput()
     print("\n2. ¿Qué tan importante es la religión para usted?\n\n - 1. No me importa para nada \n - 2. No me importa \n - 3. Me da igual \n - 4. Me importa \n - 5. Me importa mucho")
-    num3 = int(input())
+    num3 = profiles.newInput()
     print("   \n---> ¿Qué tan importante debería ser para su pareja?\n\n - 1. No le importa para nada \n - 2. No le importa \n - 3. Le da igual \n - 4. Le importa \n - 5. Le importa mucho")
-    num4 = int(input())
-    
+    num4 = profiles.newInput()
     print("\n3. ¿Le interesa tener hijos y formar una familia?\n\n - 1. No me importa para nada \n - 2. No me importa \n - 3. Me da igual \n - 4. Me importa \n - 5. Me importa mucho")
-    num5 = int(input())
+    num5 = profiles.newInput()
     print("   \n---> ¿Qué tan interesada debería estar su pareja?\n\n - 1. No le importa para nada \n - 2. No le importa \n - 3. Le da igual \n - 4. Le importa \n - 5. Le importa mucho")
-    num6 = int(input())
-    
+    num6 = profiles.newInput()
     print("\n4. ¿Qué tan importante es saber dónde esta su pareja?\n\n - 1. No me importa para nada \n - 2. No me importa \n - 3. Me da igual \n - 4. Me importa \n - 5. Me importa mucho")
-    num7 = int(input())
+    num7 = profiles.newInput()
     print("   \n---> ¿Qué tan importante debería ser para su pareja?\n\n - 1. No le importa para nada \n - 2. No le importa \n - 3. Le da igual \n - 4. Le importa \n - 5. Le importa mucho")
-    num8 = int(input())
-    
+    num8 = profiles.newInput()
     print("\n5. ¿Qué tan importante es sentirse físicamente atraído a su pareja?\n\n - 1. No me importa para nada \n - 2. No me importa \n - 3. Me da igual \n - 4. Me importa \n - 5. Me importa mucho")
-    num9 = int(input())
+    num9 = profiles.newInput()
     print("   \n---> ¿Qué tan importante debería ser para su pareja?\n\n - 1. No le importa para nada \n - 2. No le importa \n - 3. Le da igual \n - 4. Le importa \n - 5. Le importa mucho")
-    num10 = int(input())
+    num10 = profiles.newInput()
     
     #porcentaje de compatibilidad
     suma = num1 + num2 + num3 + num4 + num5 + num6 + num7 + num8 + num9 + num10
@@ -123,7 +118,9 @@ while menuIsActive:
 
         
         print("")
-
+        print('____________________________________________________________________________________________________________________________')
+        print('                                              Para continuar presione: (Enter)')
+        input()
         
         
         
@@ -147,7 +144,8 @@ while menuIsActive:
         print("cuida lo que publicas. Aparte de eso, disfruta de la aplicación, y te deseamos suerte en la búsqueda de tu pingüino(a). Atentamente, ")
         print("El equipo de MeetGuin.")
         print("\n(o_(o_(o_(o_ \n//\\//\\//\\//\\ \nU_/U_/U_/U_/_ \n")
-        print("                                                 [Presiona (ENTER) para continuar...]")
+        print('____________________________________________________________________________________________________________________________')
+        print('                                              Para continuar presione: (Enter)')
         input()
     elif eleccion == "4":
         #graph.delete(registro(user))

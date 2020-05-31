@@ -149,8 +149,34 @@ def relateIntervals(number, nodeOne):
     elif number > 90 and number <= 100:
         graph.create(Relationship(nodeOne, "ESTA_EN", InterTen))
 
-
-
+def newInput():
+    while True:
+        while True:
+            try:
+                entry = input('\n Escriba aqui: ')
+                entry = int(entry)
+                break
+            except ValueError:
+                print('                   (¡Has ingresado texto en vez de un numero como opcion, por favor vuelvelo a intentar!)')
+                print('____________________________________________________________________________________________________________________________')
+                print('                                              Para continuar presione: (Enter)')
+                input()
+        if entry > 0:
+            if entry <= 5: # Aqui se coloca el numero maximo de opciones que se quiere validar en la entrada
+                break
+            else:
+                print('                         (Has ingresado una opcion fuera del Rango, por favor vuelvelo a intentar!)')
+                print('____________________________________________________________________________________________________________________________')
+                print('                                           Para continuar presione: (Enter)')
+                input()
+                continue
+        else:
+            print('                         (Has ingresado una opcion fuera del Rango, por favor vuelvelo a intentar!)')
+            print('____________________________________________________________________________________________________________________________')
+            print('                                           Para continuar presione: (Enter)')
+            input()
+            continue
+    return entry
         
 
     
