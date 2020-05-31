@@ -16,4 +16,4 @@ Manual de usuario
 
 Si se desea, se puede observar nuestro video-tutorial del manual de usuario: https://youtu.be/uK_5WyrXTEw
 
-* = IMPORTANTE
+7. * = IMPORTANTE
