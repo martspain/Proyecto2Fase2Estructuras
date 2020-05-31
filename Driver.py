@@ -112,17 +112,18 @@ while menuIsActive:
     
     if eleccion == "1":
         
+        print("                                        * \n                         *  _|_ \n                         .-' * '-. * \n                        /       * \\ \n                     *  ^^^^^|^^^^^ \n                         .~. |  .~. \n                        / ^ \\| / ^ \\ \n                       (|   |J/|   |) \n                       '\\   /`\"\\   /` \n             -- '' -'-'  ^`^    ^`^  -- '' -'-' \n")
+        
         user = graph.evaluate("MATCH (user:Usuario) RETURN user.sex")
         
         if user == "masculino" or user == "Masculino":
             mate = graph.evaluate("MATCH (user:Usuario)-[*1..5]-(Persona{sex:'Femenino'}) RETURN DISTINCT Persona.name LIMIT(3)")
-            print(mate)
+            print("Tu mate perfecto es >> {}".format(mate))
         elif user == "femenino" or user == "Femenino":
             mate = graph.evaluate("MATCH (user:Usuario)-[*1..5]-(Persona{sex:'Masculino'}) RETURN DISTINCT Persona.name LIMIT(3)")
             print("Tu mate perfecto es >> {}".format(mate))
 
-        print("                                        * \n                         *  _|_ \n                         .-' * '-. * \n                        /       * \\ \n                     *  ^^^^^|^^^^^ \n                         .~. |  .~. \n                        / ^ \\| / ^ \\ \n                       (|   |J/|   |) \n                       '\\   /`\"\\   /` \n             -- '' -'-'  ^`^    ^`^  -- '' -'-' \n")
-        
+
     elif eleccion == "2":
         print("*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*")
         print("\n \n(o_(o_(o_(o_ \n//\\//\\//\\//\\ \nU_/U_/U_/U_/_ \n")
